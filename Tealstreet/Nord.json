@@ -1,0 +1,104 @@
+{
+  "card": {
+    "text": "rgba(236,239,244,0.75)",
+    "text2": "rgba(229,233,240,0.5)",
+    "text3": "rgba(216,222,233,0.75)",
+    "border": "rgb(59,66,82)",
+    "shadow": "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)",
+    "background": "rgb(59,66,82)"
+  },
+  "name": {
+    "value": "Nord Dark"
+  },
+  "table": {
+    "hover": "rgb(67,76,94)",
+    "zebra": "rgba(67,76,94,0.29)",
+    "border": "rgb(46,52,64)",
+    "header": "rgb(46,52,64)",
+    "background": "rgb(59,66,82)"
+  },
+  "layout": {
+    "background": "rgb(46,52,64)",
+    "darkBorder": "rgb(59,66,82)",
+    "inputShadow": "0 0 0 2px rgb(94,129,172, 0.20)"
+  },
+  "slider": {
+    "rail": "rgb(76,86,106)",
+    "track": "rgb(129,161,193)",
+    "handle": "rgb(129,161,193)",
+    "dotActive": "rgb(129,161,193)",
+    "dotBorder": "rgb(94,129,172)",
+    "handleInner": "rgb(46,52,64)",
+    "dotBackground": "rgb(46,52,64)"
+  },
+  "tuning": {
+    "tradingViewTheme": "dark",
+    "antdAlgorithm": "dark",
+    "enableTradingViewTheming": true
+  },
+  "blueTabs": {
+    "ACTIVE_BACK": "rgb(94,129,172)",
+    "INACTIVE_BACK": "rgba(94,129,172,0.5)",
+    "CARROT_HOVER_BACK": "rgb(129,161,193)",
+    "ACTIVE_HOVER_BORDER": "rgb(236,239,244)",
+    "INACTIVE_HOVER_BACK": "rgba(94,129,172,0.75)"
+  },
+  "favorites": {
+    "star": "rgb(235,203,139)",
+    "text": "rgba(236,239,244,0.75)",
+    "hover": "rgb(129,161,193)",
+    "background": "rgba(67,76,94,0.28)"
+  },
+  "baseColors": {
+    "gray": "rgb(76,86,106)",
+    "text1": "rgb(236,239,244)",
+    "text2": "rgb(229,233,240)",
+    "white": "#eceff4",
+    "button": "rgb(94,129,172)",
+    "darkGray": "#434c5e",
+    "primary1": "rgb(129,161,193)",
+    "primary2": "rgb(94,129,172)",
+    "basicGray": "#434c5e",
+    "background": "rgb(46,52,64)",
+    "foreground": "rgb(236,239,244)",
+    "orderside1": "rgb(129,161,193)",
+    "orderside2": "rgb(76,86,106)",
+    "secondary1": "rgb(129,161,193)",
+    "secondary2": "rgb(94,129,172)",
+    "orderSizeButtons": "rgb(59,66,82)"
+  },
+  "linkedTabs": {
+    "red": "#bf616a",
+    "blue": "#81a1c1",
+    "pink": "#b48ead",
+    "green": "#a3be8c",
+    "orange": "#d08770",
+    "purple": "#5e81ac",
+    "yellow": "#ebcb8b"
+  },
+  "tradingView": {
+    "grid": "rgb(46,52,64)",
+    "border": "rgb(236,239,244)",
+    "pointer": "rgb(76,86,106)",
+    "buy_body": "rgb(236,239,244)",
+    "buy_fill": "rgba(236,239,244,1)",
+    "buy_wick": "rgba(236,239,244,1)",
+    "sell_body": "rgba(236,239,244,0.5)",
+    "sell_fill": "rgba(236,239,244,0.5)",
+    "sell_wick": "rgba(236,239,244,1)",
+    "background": "rgb(46,52,64)",
+    "buy_border": "rgba(236,239,244,1)",
+    "gradientEnd": "rgb(67,76,94)",
+    "sell_border": "rgba(236,239,244,1)",
+    "gradientStart": "rgb(46,52,64)"
+  },
+  "twitterFeed": {
+    "hover": "rgb(67,76,94)",
+    "background": "rgba(67,76,94,0.42)"
+  },
+  "orderSizeButtons": {
+    "background": "#3b4252",
+    "text": "#eceff4",
+    "hoverBorder": "rgb(129,161,193)"
+  }
+}
