@@ -1,0 +1,183 @@
+{
+  "name": "chart:chart",
+  "type": "preset",
+  "data": {
+    "indicatorsErrors": {},
+    "indicators": {
+      "_79rgy2xwp9qfr67v": {
+        "enabled": true,
+        "name": "CVD",
+        "description": "Cumulative Volume Delta",
+        "script": "line(cum(vbuy - vsell))",
+        "options": {
+          "priceScaleId": "cvd",
+          "priceFormat": {
+            "type": "volume"
+          },
+          "color": "rgb(136,192,208)",
+          "scaleMargins": {
+            "top": 0.84,
+            "bottom": 0
+          },
+          "visible": true
+        },
+        "id": "_79rgy2xwp9qfr67v",
+        "createdAt": 1750669497464,
+        "updatedAt": null,
+        "libraryId": "cvd",
+        "series": [
+          "cvd"
+        ],
+        "optionsDefinitions": {},
+        "unsavedChanges": true
+      },
+      "_q4yfq788yzw5vrwf": {
+        "enabled": true,
+        "name": "Liquidations",
+        "description": "Liquidations by side",
+        "script": "histogram(lbuy, color=options.upColor)\nhistogram(-lsell, color=options.downColor)",
+        "options": {
+          "priceFormat": {
+            "type": "volume"
+          },
+          "priceScaleId": "volume_liquidations",
+          "upColor": "rgb(180,142,173)",
+          "downColor": "rgb(235,203,139)",
+          "scaleMargins": {
+            "top": 0.75,
+            "bottom": 0.17
+          }
+        },
+        "id": "_q4yfq788yzw5vrwf",
+        "createdAt": 1750669497464,
+        "updatedAt": null,
+        "libraryId": "liquidations",
+        "series": [
+          "liquidations",
+          "df6ghzp6"
+        ],
+        "optionsDefinitions": {},
+        "unsavedChanges": true
+      },
+      "_ubr53p5dmxpp41wm": {
+        "enabled": true,
+        "name": "Price",
+        "script": "var ohlc = options.useHeikinAshi ? \n    avg_heikinashi(bar) : \n    options.useGaps ? \n    avg_ohlc_with_gaps(bar) : \n    avg_ohlc(bar)\n\nplotcandlestick(ohlc)",
+        "options": {
+          "priceScaleId": "right",
+          "priceFormat": {
+            "auto": true,
+            "precision": 1
+          },
+          "priceLineVisible": true,
+          "lastValueVisible": true,
+          "borderVisible": true,
+          "upColor": "rgb(236,239,244)",
+          "downColor": "rgba(236,239,244,0.5)",
+          "borderUpColor": "rgb(236,239,244)",
+          "borderDownColor": "rgb(236,239,244)",
+          "wickUpColor": "rgb(236,239,244)",
+          "wickDownColor": "rgb(236,239,244)",
+          "useGaps": false,
+          "useHeikinAshi": false,
+          "baseLineVisible": false
+        },
+        "id": "_ubr53p5dmxpp41wm",
+        "createdAt": 1750669497464,
+        "updatedAt": null,
+        "libraryId": "price",
+        "series": [
+          "price"
+        ],
+        "optionsDefinitions": {},
+        "unsavedChanges": true
+      },
+      "_sxgj3vuxwj77oehw": {
+        "enabled": true,
+        "name": "Volume",
+        "description": "Volume + delta",
+        "script": "if (upColor === 0) {\n  if (options.showDelta) {\n    upColor = options.upBgColor\n    downColor = options.downBgColor\n  } else {\n    upColor = options.upColor\n    downColor = options.downColor\n  }\n}\n\nif (options.showDelta) {\n  histogram({ time: time, value: Math.abs(vbuy-vsell), color: vbuy - vsell > 0 ? options.upColor : options.downColor})\n}\n\nhistogram({ time: time, value: vbuy + vsell, color: vbuy > vsell ? upColor : downColor })",
+        "options": {
+          "priceFormat": {
+            "type": "volume"
+          },
+          "upColor": "rgb(163,190,140)",
+          "downColor": "rgb(191,97,106)",
+          "priceScaleId": "volume",
+          "scaleMargins": {
+            "top": 0.84,
+            "bottom": 0
+          },
+          "showDelta": true,
+          "upBgColor": "rgba(163,190,140,0.5)",
+          "downBgColor": "rgba(191,97,106,0.5)",
+          "color": "rgb(235,203,139)"
+        },
+        "id": "_sxgj3vuxwj77oehw",
+        "createdAt": 1750669497464,
+        "updatedAt": 1750699574627,
+        "libraryId": "volume",
+        "series": [
+          "volume",
+          "enx7i8ag"
+        ],
+        "optionsDefinitions": {},
+        "unsavedChanges": false
+      }
+    },
+    "indicatorOrder": [
+      "_79rgy2xwp9qfr67v",
+      "_q4yfq788yzw5vrwf",
+      "_ubr53p5dmxpp41wm",
+      "_sxgj3vuxwj77oehw"
+    ],
+    "priceScales": {
+      "right": {
+        "scaleMargins": {
+          "top": 0.04,
+          "bottom": 0.26
+        }
+      },
+      "cvd": {
+        "scaleMargins": {
+          "top": 0.84,
+          "bottom": 0
+        }
+      },
+      "volume_liquidations": {
+        "scaleMargins": {
+          "top": 0.75,
+          "bottom": 0.17
+        }
+      },
+      "volume": {
+        "scaleMargins": {
+          "top": 0.84,
+          "bottom": 0
+        }
+      }
+    },
+    "layouting": false,
+    "showIndicators": false,
+    "timeframe": "1800",
+    "refreshRate": 1000,
+    "showAlerts": true,
+    "showAlertsLabel": true,
+    "showLegend": true,
+    "fillGapsWithEmpty": false,
+    "showHorizontalGridlines": false,
+    "horizontalGridlinesColor": "rgba(255,255,255,.1)",
+    "showVerticalGridlines": false,
+    "verticalGridlinesColor": "rgba(255,255,255,.1)",
+    "showWatermark": true,
+    "watermarkColor": "rgba(255,255,255,.033)",
+    "showBorder": true,
+    "borderColor": null,
+    "textColor": null,
+    "showLeftScale": false,
+    "showRightScale": true,
+    "showTimeScale": true,
+    "hiddenMarkets": {},
+    "barSpacing": 3.29335355962329
+  }
+}

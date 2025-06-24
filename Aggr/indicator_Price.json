@@ -1,0 +1,85 @@
+{
+  "type": "indicator",
+  "name": "Price",
+  "data": {
+    "libraryId": "price",
+    "options": {
+      "priceScaleId": "right",
+      "priceFormat": {
+        "auto": true,
+        "precision": 1
+      },
+      "priceLineVisible": true,
+      "lastValueVisible": true,
+      "borderVisible": true,
+      "upColor": "rgb(236,239,244)",
+      "downColor": "rgba(236,239,244,0.5)",
+      "borderUpColor": "rgb(236,239,244)",
+      "borderDownColor": "rgb(236,239,244)",
+      "wickUpColor": "rgb(236,239,244)",
+      "wickDownColor": "rgb(236,239,244)",
+      "useGaps": false,
+      "useHeikinAshi": false,
+      "baseLineVisible": false
+    },
+    "script": "var ohlc = options.useHeikinAshi ? \n    avg_heikinashi(bar) : \n    options.useGaps ? \n    avg_ohlc_with_gaps(bar) : \n    avg_ohlc(bar)\n\nplotcandlestick(ohlc)",
+    "createdAt": 1750669497464,
+    "updatedAt": null,
+    "presets": [
+      {
+        "name": "indicator:price:blue",
+        "type": "indicator",
+        "version": "3.0.8",
+        "data": {
+          "options": {
+            "upColor": "rgba(33, 150, 243, 0)",
+            "borderUpColor": "rgb(255, 255, 255)",
+            "wickUpColor": "rgba(255, 255, 255, .45)",
+            "downColor": "rgba(66, 165, 245, .47)",
+            "borderDownColor": "rgb(255, 255, 255, .33)",
+            "wickDownColor": "rgb(100, 181, 246, .53)",
+            "borderVisible": true,
+            "lastValueVisible": true,
+            "priceLineColor": "rgba(255, 255, 255, .5)",
+            "priceLineVisible": true
+          }
+        }
+      },
+      {
+        "name": "indicator:price:default",
+        "type": "indicator",
+        "version": "3.0.8",
+        "data": {
+          "options": {
+            "upColor": "rgba(100, 157, 102, 0)",
+            "downColor": "rgb(156,52,62)",
+            "borderUpColor": "rgb(59, 202, 109)",
+            "borderDownColor": "rgb(239,67,82)",
+            "wickUpColor": "rgb(59, 202, 109)",
+            "wickDownColor": "rgb(239,67,82)",
+            "borderVisible": true,
+            "lastValueVisible": true,
+            "priceLineColor": "rgba(255, 255, 255, .5)",
+            "priceLineVisible": true
+          }
+        }
+      },
+      {
+        "name": "indicator:price:light",
+        "type": "indicator",
+        "version": "3.0.8",
+        "data": {
+          "options": {
+            "upColor": "rgb(165,214,167)",
+            "downColor": "rgb(239,154,154)",
+            "borderUpColor": "rgb(102,187,106)",
+            "borderDownColor": "rgb(229,115,115)",
+            "wickUpColor": "rgb(102,187,106)",
+            "wickDownColor": "rgb(239,154,154)",
+            "priceLineColor": "rgba(0,0,0,0.5)"
+          }
+        }
+      }
+    ]
+  }
+}

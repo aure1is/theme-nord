@@ -1,0 +1,24 @@
+{
+  "type": "indicator",
+  "name": "Liquidations",
+  "data": {
+    "libraryId": "liquidations",
+    "options": {
+      "priceFormat": {
+        "type": "volume"
+      },
+      "priceScaleId": "volume_liquidations",
+      "upColor": "rgb(180,142,173)",
+      "downColor": "rgb(235,203,139)",
+      "scaleMargins": {
+        "top": 0.75,
+        "bottom": 0.17
+      }
+    },
+    "description": "Liquidations by side",
+    "script": "histogram(lbuy, color=options.upColor)\nhistogram(-lsell, color=options.downColor)",
+    "createdAt": 1750669497464,
+    "updatedAt": null,
+    "presets": []
+  }
+}
